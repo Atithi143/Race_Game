@@ -2,10 +2,10 @@ window.focus(); // Capture keys right away (by default focus is on editor)
 // Declarations
 //Car colors
 const vehicleColors = [
-  0xa52526, 0xef2d45, 0x0ad3cc, 0xff9f1f,
+  0xa52526, 0xef2d45, 0x0ad3cc, 0xff9f1f ,
 ];
 
-const lawnGreen = "#67C240";
+const lawnGreen = "#00ff00";
 const trackColor = "#546E90";
 const edgeColor = "#725F48";
 const treeCrownColor = 0x498c2c;
@@ -407,7 +407,7 @@ function Tree() {
   trunk.matrixAutoUpdate = false;
   tree.add(trunk);
 
-  const treeHeights = [45, 60, 75];
+  const treeHeights = [45, 100, 75];
   const height = pickRandom(treeHeights);
 
   const crown = new THREE.Mesh(
@@ -470,7 +470,7 @@ function renderMap(mapWidth, mapHeight) {
     scene.add(tree1);
 
     const tree2 = Tree();
-    tree2.position.y = arcCenterX * 1.9;
+    tree2.position.y = arcCenterX * 1.0;
     tree2.position.x = arcCenterX * 1.3;
     scene.add(tree2);
 
@@ -513,26 +513,6 @@ function renderMap(mapWidth, mapHeight) {
     tree10.position.x = -arcCenterX * 2;
     tree10.position.y = -arcCenterX * 1.8;
     scene.add(tree10);
-
-    const tree11 = Tree();
-    tree11.position.x = arcCenterX * 0.6;
-    tree11.position.y = -arcCenterX * 2.3;
-    scene.add(tree11);
-
-    const tree12 = Tree();
-    tree12.position.x = arcCenterX * 1.5;
-    tree12.position.y = -arcCenterX * 2.4;
-    scene.add(tree12);
-
-    const tree13 = Tree();
-    tree13.position.x = -arcCenterX * 0.7;
-    tree13.position.y = -arcCenterX * 2.4;
-    scene.add(tree13);
-
-    const tree14 = Tree();
-    tree14.position.x = -arcCenterX * 1.5;
-    tree14.position.y = -arcCenterX * 1.8;
-    scene.add(tree14);
   }
 }
 
